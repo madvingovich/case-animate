@@ -2,10 +2,13 @@ import React from 'react';
 import { BalanceContext } from '../context/BalanceContextProvider';
 
 function Balance() {
-  const [balance] = React.useContext<[number]>(BalanceContext);
+  const { balance } = React.useContext(BalanceContext);
 
   return balance ? (
-    <h1 className="absolute right-0 text-bold">{balance} $</h1>
+    <h3 className="absolute right-0 font-bold">
+      Current Balance:{' '}
+      <span className="text-red-700">{balance.toFixed(2)} $</span>
+    </h3>
   ) : null;
 }
 

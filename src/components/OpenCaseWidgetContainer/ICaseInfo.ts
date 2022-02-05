@@ -1,6 +1,6 @@
 export interface ICaseInfo {
   url: string;
-  fillTitle: string;
+  fullTitle: string;
   title: string;
   subtitle: string;
   icon: string;

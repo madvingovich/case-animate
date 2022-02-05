@@ -1,5 +1,7 @@
 import React from 'react';
+import DropInfo from './DropInfo';
 import { ICaseInfo } from './ICaseInfo';
+import OpenButton from './OpenButton';
 
 interface OpenCaseProps {
   openCase: () => void;
@@ -9,8 +11,9 @@ interface OpenCaseProps {
 
 function OpenCase({ openCase, opening, lastCaseInfo }: OpenCaseProps) {
   return (
-    <div className="w-72 h-72 rounded-md border border-indigo-300 flex items-center justify-center shadow-xl">
-      <button>OPEN</button>
+    <div className="w-72 rounded-md border border-indigo-300 shadow-xl">
+      <DropInfo item={lastCaseInfo} opening={opening} />
+      <OpenButton loading={opening} onClick={openCase} />
     </div>
   );
 }
