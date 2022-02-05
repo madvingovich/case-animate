@@ -1,11 +1,15 @@
-import { PriceContextProvider } from '../context/PriceContextProvider';
+import { BalanceContextProvider } from '../context/BalanceContextProvider';
+import Balance from './Balance';
 import OpenCaseWidgedContainer from './OpenCaseWidget';
 
 function App() {
   return (
-    <PriceContextProvider>
-      <OpenCaseWidgedContainer />
-    </PriceContextProvider>
+    <div className="container mx-auto relative h-screen flex items-center justify-center">
+      <BalanceContextProvider>
+        <Balance />
+        <OpenCaseWidgedContainer />
+      </BalanceContextProvider>
+    </div>
   );
 }
 
